@@ -1,30 +1,449 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>De-Shittification of America</title><style>
-:root{--ink:#090909;--paper:#eee9dc;--acid:#eaff00;--red:#ff4b36;--white:#fff;--muted:#625f58}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;background-image:linear-gradient(#0001 1px,transparent 1px),linear-gradient(90deg,#0001 1px,transparent 1px);background-size:13px 13px}button,a,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}.wrap{max-width:1120px;margin:auto;padding:0 18px}header{position:sticky;top:0;z-index:30;background:#090909;color:#fff;border-bottom:5px solid var(--acid)}.head{min-height:72px;display:flex;align-items:center;gap:14px}.logo{font:900 27px Impact,'Arial Black',sans-serif}.logo b{background:var(--acid);color:#090909;padding:4px 7px}.nav{margin-left:auto;display:flex;gap:10px}.nav button{background:#111;color:#fff;border:2px solid #fff;padding:9px 12px;font-weight:900}.nav button.primary{background:var(--red);color:#000;border-color:#000}.hero{display:grid;grid-template-columns:390px 1fr;gap:30px;padding:42px 0 26px}.art{min-height:540px;border:4px solid #111;box-shadow:9px 9px #111;background:#111;position:relative;overflow:hidden}.art img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.08)}.tape{position:absolute;left:18px;top:18px;background:var(--acid);color:#000;padding:7px 10px;font-weight:900;transform:rotate(-4deg);border:2px solid #000}.rn{position:absolute;left:18px;bottom:18px;background:var(--red);color:#000;padding:10px 12px;font:900 25px Impact,'Arial Black';transform:rotate(-5deg);border:2px solid #000}h1,h2{font-family:Impact,'Arial Black',sans-serif;text-transform:uppercase;line-height:.88}h1{font-size:clamp(66px,9vw,112px);margin:14px 0}.hi{background:var(--acid);color:#000;padding:0 .06em}.lead{font-size:23px;font-weight:900;line-height:1.28}.card{background:#fff;border:3px solid #111;padding:22px;margin:20px 0;box-shadow:7px 7px #111}.screen{display:none;padding:32px 0 100px}.screen.on{display:block}.field,.story,textarea{width:100%;border:2px solid #111;padding:14px;background:#fffdf8;color:#111;font-size:16px}.story{min-height:170px}.btn{display:block;width:100%;border:3px solid #111;padding:16px 18px;margin:12px 0;font-weight:950;font-size:17px;box-shadow:5px 5px #111;text-decoration:none!important;text-align:center}.btn.red,.btn.red:visited,.btn.red:hover,.btn.red:active{background:var(--red)!important;color:#000!important}.btn.acid,.btn.acid:visited,.btn.acid:hover,.btn.acid:active{background:var(--acid)!important;color:#000!important}.btn.black,.btn.black:visited,.btn.black:hover,.btn.black:active{background:#111!important;color:#fff!important;box-shadow:5px 5px var(--acid)}.btn.white{background:#fff!important;color:#000!important}.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}.micro{font:13px/1.45 'Courier New',monospace;color:var(--muted)}.badge{display:inline-block;background:var(--acid);color:#000;border:1px solid #111;padding:4px 6px;font:900 11px 'Courier New'}.progress{display:flex;gap:5px;margin:12px 0 25px}.progress i{height:8px;flex:1;border:1px solid #111;background:#fff}.progress i.on{background:#111}.choices{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}.choice{border:2px solid #111;background:#fff;color:#000;padding:12px 14px;font-weight:900;box-shadow:3px 3px #111}.choice.sel{background:var(--acid);transform:translate(2px,2px);box-shadow:1px 1px #111}.label{font:900 12px 'Courier New';letter-spacing:.1em}.route{border-top:2px solid #111;padding:14px 0}.route:first-child{border-top:0}.route .mode{display:inline-block;margin-top:6px;padding:4px 7px;font:900 11px 'Courier New';background:#ddd}.route .mode.auto{background:var(--acid)}.memo{font-family:'Courier New';line-height:1.5}.warn{border:4px solid var(--red);padding:16px;background:#fff}.console{background:#0b0b0b;color:var(--acid);padding:15px;font:13px/1.5 'Courier New';white-space:pre-wrap}.case{background:#fff;border:2px solid #111;padding:16px;margin:13px 0}.bottom{position:fixed;bottom:0;left:0;right:0;background:#090909;border-top:4px solid var(--acid);display:grid;grid-template-columns:repeat(3,1fr);z-index:40;padding-bottom:env(safe-area-inset-bottom)}.bottom button{background:#090909;color:#fff;border:0;padding:16px 4px;font-weight:900}.bottom button.active{color:var(--acid)}.status{background:var(--acid);color:#000;padding:5px 7px;font:900 11px 'Courier New'}.human{background:#fff;border:4px dashed #111;padding:20px;margin:18px 0}.human strong{display:block;font:30px Impact,'Arial Black';margin-bottom:8px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.error{color:#8b1400;font-weight:900}@media(max-width:800px){.hero{grid-template-columns:1fr}.art{min-height:430px}.nav button:not(.primary){display:none}h1{font-size:66px}.row{grid-template-columns:1fr}.logo{font-size:22px}}
-</style></head><body>
-<header><div class="wrap head"><div class="logo">DE-SHITTIFICATION <b>OF AMERICA</b></div><div class="nav"><button id="navCases">MY CASES</button><button id="navReport" class="primary">REPORT IT</button></div></div></header>
-<main class="wrap">
-<section id="home" class="screen on"><div class="hero"><div class="art"><img src="https://pbesndmimhujqivviqpw.supabase.co/functions/v1/dsa-art" alt="Punk Statue of Liberty collage"><div class="tape">PEOPLE OVER BULLSHIT</div><div class="rn">REPORT IT. FILE IT. FIX IT.</div></div><div><span class="badge">SAME BULLSHIT. DIFFERENT DECADE.</span><h1>YOU COMPLAIN ONCE.<br><span class="hi">WE DO THE BUREAUCRACY.</span></h1><p class="lead">Submission is the product. Tracking is what happens afterward.</p><p>Tell us what happened. We build a real submission plan, create the case, and only offer <b>FILE IT FOR ME</b> when a verified filing path exists.</p></div></div><div class="card"><h2>TELL US WHAT HAPPENED.</h2><textarea id="story" class="story" placeholder="Talk like a person. What happened?"></textarea><button id="startBtn" class="btn red" type="button">ANALYZE & BUILD SUBMISSION PLAN →</button><p class="micro">NO FAKE FILED STATUS. NO CAPTCHA/MFA BYPASS. NO BLUE TEXT ON RED BUTTONS.</p></div></section>
-<section id="wizard" class="screen"><div id="prog" class="progress"></div><span id="stepno" class="badge"></span><h2 id="question"></h2><div id="wizardBody"></div><button id="nextBtn" class="btn red" type="button">CONTINUE →</button><button id="backBtn" class="btn white" type="button">BACK</button></section>
-<section id="review" class="screen"><span class="badge">SUBMISSION PLAN</span><h2>WHO MAY BE RESPONSIBLE.</h2><div id="routes" class="card"></div><div id="memo" class="card memo"></div><button id="editBtn" class="btn white" type="button">CHANGE SOMETHING</button><button id="authorizeBtn" class="btn black" type="button" disabled>BUILDING CASE…</button><p class="micro">The filing button unlocks only when the backend reports a verified automatable route.</p></section>
-<section id="agent" class="screen"><span class="badge">FILING AGENT</span><h2>NO FAKE HANDOFFS.</h2><div class="card"><b>CASE <span id="caseid"></span></b><div id="console" class="console"></div></div><div id="human"></div></section>
-<section id="cases" class="screen"><span class="badge">ACCOUNTABILITY LOG</span><h2>MY CASES</h2><div id="caseList"></div></section>
-<section id="about" class="screen"><span class="badge">WHY THIS EXISTS</span><h2>REMEMBER WHEN SHIT USED TO WORK?</h2><div class="card"><p class="lead">The front end has an attitude. The evidence doesn't.</p><p>This isn't Yelp. It's an accountability front door built around one promise: you should not have to understand the bureaucracy to use it.</p></div></section>
-</main><nav class="bottom"><button id="tabReport">REPORT</button><button id="tabCases">MY CASES</button><button id="tabAbout">ABOUT</button></nav>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>De-Shittification of America</title>
+<meta name="description" content="You complain once. We do the bureaucracy.">
+<style>
+:root{
+  --ink:#0a0a0a;--paper:#f2eee5;--cream:#fffdf7;--acid:#eaff00;
+  --red:#ff523d;--muted:#676157;--line:#171717;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:var(--paper);
+  font-family:Arial,Helvetica,sans-serif;
+  background-image:
+    linear-gradient(#0000000a 1px,transparent 1px),
+    linear-gradient(90deg,#0000000a 1px,transparent 1px);
+  background-size:14px 14px;
+}
+button,input,textarea{font:inherit}
+button{cursor:pointer;color:#000}
+.wrap{width:min(1180px,calc(100% - 34px));margin:auto}
+header{
+  position:sticky;top:0;z-index:50;background:#050505;color:#fff;
+  border-bottom:5px solid var(--acid)
+}
+.topbar{min-height:72px;display:flex;align-items:center;gap:24px}
+.logo{
+  font-family:Impact,"Arial Black",sans-serif;font-size:28px;letter-spacing:.3px
+}
+.logo span{background:var(--acid);color:#050505;padding:3px 8px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:18px}
+.nav button{
+  appearance:none;border:0;background:transparent;color:#fff;font-weight:900;
+  font-size:13px;padding:10px 0
+}
+.nav .hot{
+  border:2px solid #fff;background:var(--red);color:#000!important;padding:11px 15px
+}
+.hero{
+  display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:34px;
+  align-items:center;padding:46px 0 34px
+}
+.art{
+  position:relative;min-height:480px;border:4px solid var(--line);
+  background:#111;box-shadow:10px 10px 0 #111;overflow:hidden
+}
+.art img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.08)}
+.art .tag{
+  position:absolute;top:20px;left:16px;background:var(--acid);border:2px solid #111;
+  padding:8px 11px;font-weight:950;transform:rotate(-4deg)
+}
+.art .sticker{
+  position:absolute;bottom:20px;left:16px;background:var(--red);border:2px solid #111;
+  padding:9px 12px;font-family:Impact,"Arial Black",sans-serif;font-size:24px;transform:rotate(-4deg)
+}
+.kicker{
+  display:inline-block;background:#111;color:#fff;padding:7px 10px;
+  font:900 12px "Courier New",monospace;letter-spacing:.12em
+}
+h1,h2,h3{font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase}
+h1{
+  font-size:clamp(58px,7.8vw,102px);line-height:.86;letter-spacing:-1.5px;margin:17px 0
+}
+.highlight{background:var(--acid);padding:0 .06em}
+.hero p.lead{font-size:24px;line-height:1.24;font-weight:900;margin:14px 0}
+.hero p.copy{font-size:17px;line-height:1.45;max-width:700px}
+.promise{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px
+}
+.promise div{
+  border:2px solid #111;background:#fff;padding:10px 11px;font-weight:900;font-size:12px
+}
+.report-shell{
+  display:grid;grid-template-columns:1fr 310px;gap:22px;padding:20px 0 62px
+}
+.panel{
+  background:#fff;border:3px solid var(--line);box-shadow:7px 7px 0 #111;padding:24px
+}
+.panel h2{font-size:44px;line-height:.94;margin:0 0 12px}
+label{font-weight:900;font-size:13px;display:block;margin-bottom:7px}
+textarea,input{
+  width:100%;border:2px solid #111;background:var(--cream);color:#111;padding:14px;
+  border-radius:0;outline:none
+}
+textarea:focus,input:focus{box-shadow:0 0 0 3px var(--acid)}
+textarea{min-height:180px;resize:vertical;font-size:17px}
+.btn{
+  appearance:none;border:3px solid #111;box-shadow:5px 5px 0 #111;padding:15px 18px;
+  font-weight:950;font-size:16px;text-decoration:none!important;text-align:center;
+  transition:transform .08s ease,box-shadow .08s ease
+}
+.btn:active{transform:translate(4px,4px);box-shadow:1px 1px 0 #111}
+.btn.red{background:var(--red)!important;color:#000!important}
+.btn.acid{background:var(--acid)!important;color:#000!important}
+.btn.black{background:#111!important;color:#fff!important;box-shadow:5px 5px 0 var(--acid)}
+.btn.white{background:#fff!important;color:#000!important}
+.btn:disabled{opacity:.42;box-shadow:none;cursor:not-allowed}
+.primary-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.primary-row .btn:first-child{flex:1;min-width:240px}
+.micro{font:12px/1.5 "Courier New",monospace;color:var(--muted)}
+.side-card{
+  border:3px solid #111;background:#111;color:#fff;padding:20px;align-self:start
+}
+.side-card h3{font-size:28px;margin:0 0 12px}
+.side-card .item{border-top:1px solid #555;padding:12px 0}
+.side-card .item:first-of-type{border-top:0}
+.side-card b{color:var(--acid)}
+.stage{display:none;padding:20px 0 70px}
+.stage.on{display:block}
+.stepbar{display:flex;gap:6px;margin:12px 0 26px}
+.stepbar i{height:8px;flex:1;border:1px solid #111;background:#fff}
+.stepbar i.on{background:#111}
+.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0 18px}
+.choice{
+  appearance:none;border:2px solid #111;background:#fff;color:#000!important;padding:13px;
+  font-weight:900;text-align:left;box-shadow:3px 3px 0 #111
+}
+.choice.sel{background:var(--acid);transform:translate(2px,2px);box-shadow:1px 1px 0 #111}
+.route{
+  border-top:2px solid #111;padding:15px 0;display:grid;grid-template-columns:1fr auto;gap:12px
+}
+.route:first-child{border-top:0}
+.pill{
+  display:inline-block;background:var(--acid);padding:4px 7px;border:1px solid #111;
+  font:900 11px "Courier New",monospace
+}
+.pill.hold{background:#ddd7ca}
+.memo{
+  font-family:"Courier New",monospace;line-height:1.55;background:#fffdf7;border:2px solid #111;padding:18px
+}
+.console{background:#0a0a0a;color:var(--acid);padding:16px;font:13px/1.55 "Courier New",monospace;white-space:pre-wrap}
+.warn{border:4px solid var(--red);padding:18px;background:#fff}
+.warn strong{font-family:Impact,"Arial Black",sans-serif;font-size:28px;display:block;margin-bottom:8px}
+.case{background:#fff;border:2px solid #111;padding:16px;margin:12px 0}
+.case h3{margin:8px 0;font-size:23px}
+.footer{background:#111;color:#fff;border-top:5px solid var(--acid);padding:32px 0 45px}
+.footer strong{font-family:Impact,"Arial Black",sans-serif;font-size:30px}
+.toast{
+  position:fixed;right:18px;bottom:18px;background:#111;color:#fff;border:2px solid var(--acid);
+  padding:12px 15px;font-weight:900;display:none;z-index:99
+}
+@media(max-width:900px){
+  .nav button:not(.hot){display:none}
+  .hero{grid-template-columns:1fr;padding-top:28px}
+  .art{min-height:390px}
+  .report-shell{grid-template-columns:1fr}
+  .side-card{order:-1}
+}
+@media(max-width:560px){
+  .wrap{width:min(100% - 22px,1180px)}
+  .topbar{min-height:64px}
+  .logo{font-size:21px}
+  .nav .hot{padding:9px 10px;font-size:12px}
+  h1{font-size:56px}
+  .hero p.lead{font-size:20px}
+  .art{min-height:330px}
+  .promise{grid-template-columns:1fr}
+  .choice-grid{grid-template-columns:1fr}
+  .panel{padding:18px;box-shadow:5px 5px 0 #111}
+  .panel h2{font-size:38px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="logo">DE-SHITTIFICATION <span>OF AMERICA</span></div>
+    <nav class="nav">
+      <button id="navReport" type="button">REPORT</button>
+      <button id="navCases" type="button">MY CASES</button>
+      <button id="navAbout" type="button">ABOUT</button>
+      <button id="navHot" class="hot" type="button">DE-SHITTIFY IT</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="home" class="stage on">
+  <div class="wrap hero">
+    <div class="art">
+      <img src="https://pbesndmimhujqivviqpw.supabase.co/functions/v1/dsa-art" alt="Punk Statue of Liberty collage">
+      <div class="tag">PEOPLE OVER BULLSHIT</div>
+      <div class="sticker">REPORT IT. FILE IT. FIX IT.</div>
+    </div>
+    <div>
+      <span class="kicker">SAME BULLSHIT. DIFFERENT DECADE.</span>
+      <h1>YOU COMPLAIN ONCE.<br><span class="highlight">WE DO THE BUREAUCRACY.</span></h1>
+      <p class="lead">Submission is the product. Tracking is what happens afterward.</p>
+      <p class="copy">Tell us what happened in plain English. We turn it into a factual complaint, identify the authorities that may have jurisdiction, and check whether the filing can actually be automated.</p>
+      <div class="promise">
+        <div>NO RE-TYPING</div><div>NO FAKE “FILED” STATUS</div><div>YOU APPROVE THE FACTS</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap report-shell" id="report">
+    <div class="panel">
+      <h2>WHAT'S SHIT?</h2>
+      <label for="story">TELL US WHAT HAPPENED</label>
+      <textarea id="story" placeholder="Talk like a person. What happened?"></textarea>
+      <div class="primary-row">
+        <button class="btn red" id="startBtn" type="button">ANALYZE & BUILD SUBMISSION PLAN →</button>
+        <button class="btn white" id="reportableBtn" type="button">NOT SURE IT'S REPORTABLE?</button>
+      </div>
+      <p class="micro">NO GOVERNMENT LINK DRESSED UP AS AUTOMATION. NO CAPTCHA/MFA BYPASS.</p>
+    </div>
+    <aside class="side-card">
+      <h3>WHAT HAPPENS NEXT</h3>
+      <div class="item"><b>01</b> We collect only the facts agencies need.</div>
+      <div class="item"><b>02</b> We identify likely regulators and filing methods.</div>
+      <div class="item"><b>03</b> If a real adapter exists, we unlock FILE IT FOR ME.</div>
+      <div class="item"><b>04</b> If a human-only step is required, we stop there and say exactly why.</div>
+    </aside>
+  </div>
+</section>
+
+<section id="wizard" class="stage">
+  <div class="wrap">
+    <span class="kicker" id="stepLabel">STEP 1</span>
+    <div id="stepbar" class="stepbar"></div>
+    <div class="panel">
+      <h2 id="question">WHERE DID IT HAPPEN?</h2>
+      <div id="wizardBody"></div>
+      <div class="primary-row">
+        <button class="btn red" id="nextBtn" type="button">CONTINUE →</button>
+        <button class="btn white" id="backBtn" type="button">BACK</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="review" class="stage">
+  <div class="wrap">
+    <span class="kicker">SUBMISSION PLAN</span>
+    <div class="panel">
+      <h2>WHO MAY BE RESPONSIBLE.</h2>
+      <div id="routes"></div>
+    </div>
+    <div class="panel">
+      <h2>FACTUAL COMPLAINT</h2>
+      <div id="memo" class="memo"></div>
+      <div class="primary-row">
+        <button class="btn white" id="editBtn" type="button">CHANGE SOMETHING</button>
+        <button class="btn black" id="authorizeBtn" type="button" disabled>BUILDING CASE…</button>
+      </div>
+      <div id="noAuto" class="warn" style="display:none;margin-top:16px">
+        <strong>NO VERIFIED AUTO-FILING PATH YET.</strong>
+        We found the authority, but we are not going to pretend anything was filed.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agent" class="stage">
+  <div class="wrap">
+    <span class="kicker">FILING AGENT</span>
+    <div class="panel">
+      <h2>NO FAKE HANDOFFS.</h2>
+      <div class="console" id="console"></div>
+      <div id="human" style="margin-top:16px"></div>
+    </div>
+  </div>
+</section>
+
+<section id="cases" class="stage">
+  <div class="wrap">
+    <span class="kicker">ACCOUNTABILITY LOG</span>
+    <div class="panel">
+      <h2>MY CASES</h2>
+      <div id="caseList"></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="stage">
+  <div class="wrap">
+    <span class="kicker">WHY THIS EXISTS</span>
+    <div class="panel">
+      <h2>REMEMBER WHEN SHIT USED TO WORK?</h2>
+      <p class="lead">We do.</p>
+      <p>This isn't Yelp. It's an accountability front door. The public experience can have an attitude; the complaint itself stays factual, chronological and professional.</p>
+      <p><b>The front end has an attitude. The evidence doesn't.</b></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap"><strong>STOP ACCEPTING DECLINING QUALITY AS NORMAL.</strong></div>
+</footer>
+<div id="toast" class="toast"></div>
+
 <script>
-(()=>{
-const $=id=>document.getElementById(id);const API='https://pbesndmimhujqivviqpw.supabase.co/functions/v1/case-agent';let d={story:'',where:'',who:[],name:'',issues:[],impact:[],tried:[],evidence:[],outcomes:[]},step=0,analysis=null,caseId='';
-const steps=[['Where did it happen?','where',null],['Who was responsible?','who',['LANDLORD','PROPERTY MANAGER','HOSPITAL','NURSING HOME','DOCTOR / PROVIDER','EMPLOYER','INSURANCE COMPANY','CONTRACTOR','BUSINESS','GOVERNMENT AGENCY','NOT SURE']],['What was wrong?','issues',['UNSAFE','BROKEN / NOT WORKING','BILLING / MONEY','IGNORED / NO RESPONSE','DELAYED','POOR QUALITY','DISCRIMINATION','MISCONDUCT','FRAUD / DECEPTION','FAILED SERVICE','RETALIATION','OTHER']],['What did it cause?','impact',['SAFETY RISK','FINANCIAL LOSS','HEALTH IMPACT','ACCESS PROBLEM','MISSED WORK','PROPERTY DAMAGE','EMOTIONAL DISTRESS','NO DIRECT HARM YET']],['What have you already tried?','tried',['CALLED','EMAILED','SPOKE TO MANAGER','FILED INTERNAL COMPLAINT','REQUESTED REFUND','REQUESTED REPAIR','CONTACTED GOVERNMENT','NOTHING YET']],['What proof do you have?','evidence',['PHOTOS','VIDEO','EMAILS','TEXTS','RECEIPTS','BILLS','CONTRACT','MEDICAL RECORDS','LETTERS / NOTICES','WITNESSES','NONE YET']],['What do you want done?','outcomes',['INSPECTION','REPAIR / CORRECTION','REFUND','REIMBURSEMENT','INVESTIGATION','WRITTEN RESPONSE','DISCIPLINE / ENFORCEMENT','STOP THE CONDUCT','RECORD CORRECTION']]];
-function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');['tabReport','tabCases','tabAbout'].forEach(x=>$(x).classList.remove('active'));if(id==='home')$('tabReport').classList.add('active');if(id==='cases')$('tabCases').classList.add('active');if(id==='about')$('tabAbout').classList.add('active');if(id==='cases')renderCases();window.scrollTo({top:0,behavior:'smooth'})}
-function start(){let v=$('story').value.trim();if(!v)return alert('Tell us what happened first.');d.story=v;step=0;renderStep();show('wizard')}
-function renderStep(){let s=steps[step];$('stepno').textContent='STEP '+(step+1)+' / '+steps.length;$('question').textContent=s[0];$('prog').innerHTML=steps.map((_,i)=>'<i class="'+(i<=step?'on':'')+'"></i>').join('');if(!s[2]){$('wizardBody').innerHTML='<input id="textval" class="field" placeholder="City, state, ZIP">'}else{$('wizardBody').innerHTML='<div class="choices">'+s[2].map(v=>'<button type="button" class="choice" data-v="'+v+'">'+v+'</button>').join('')+'</div>'+(s[1]==='who'?'<label class="label">ACTUAL NAME — OPTIONAL</label><input id="whoName" class="field" placeholder="Business, facility, person, agency...">':'');document.querySelectorAll('.choice').forEach(b=>b.addEventListener('click',()=>b.classList.toggle('sel')))}$('nextBtn').textContent=step===steps.length-1?'BUILD THE SUBMISSION PLAN →':'CONTINUE →'}
-function next(){let s=steps[step];if(!s[2]){let v=$('textval').value.trim();if(!v)return alert('Add the location.');d.where=v}else{let a=[...document.querySelectorAll('.choice.sel')].map(e=>e.dataset.v);if(!a.length)return alert('Pick at least one.');d[s[1]]=a;if(s[1]==='who')d.name=$('whoName').value.trim()}if(step<steps.length-1){step++;renderStep()}else buildCase()}
-function back(){if(step>0){step--;renderStep()}else show('home')}
-async function call(payload){let r=await fetch(API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});let j=await r.json().catch(()=>({error:'Invalid server response'}));if(!r.ok)throw Error(j.error||'Case engine unavailable');return j}
-function refs(){return JSON.parse(localStorage.getItem('dsa_case_index')||'[]')}function saveRef(ref){let a=refs().filter(x=>x.case_number!==ref.case_number);a.unshift(ref);localStorage.setItem('dsa_case_index',JSON.stringify(a.slice(0,50)))}
-function memoHtml(){let who=d.name||d.who.join(', ');return '<b>FACTUAL COMPLAINT MEMORANDUM</b><p><b>SUBJECT:</b> '+who+'</p><p><b>LOCATION:</b> '+d.where+'</p><p><b>ALLEGATION:</b> '+d.story+'</p><p><b>ISSUES:</b> '+d.issues.join('; ')+'</p><p><b>IMPACT:</b> '+d.impact.join('; ')+'</p><p><b>PRIOR ATTEMPTS:</b> '+d.tried.join('; ')+'</p><p><b>EVIDENCE:</b> '+d.evidence.join('; ')+'</p><p><b>REQUESTED ACTION:</b> '+d.outcomes.join('; ')+'</p><p class="micro">Prepared from the complainant account; not a finding that a violation occurred.</p>'}
-async function buildCase(){let who=d.name||d.who.join(', ');$('memo').innerHTML=memoHtml();$('routes').innerHTML='<b>BUILDING REAL CASE…</b>';$('authorizeBtn').disabled=true;$('authorizeBtn').textContent='BUILDING CASE…';show('review');try{let j=await call({action:'create_case',original_story:d.story,location_text:d.where,subject_name:who,subject_types:d.who,problem_types:d.issues,impacts:d.impact,prior_actions:d.tried,evidence_types:d.evidence,desired_outcomes:d.outcomes});caseId=j.case.case_number;analysis={token:j.guest_token,routes:j.routes||[],who};saveRef({case_number:caseId,guest_token:j.guest_token,who,where:d.where});let autos=analysis.routes.filter(r=>r.supports_direct_automation);$('routes').innerHTML='<span class="badge">'+caseId+'</span><h3>'+analysis.routes.length+' AUTHORITY ROUTE'+(analysis.routes.length===1?'':'S')+' IDENTIFIED</h3>'+analysis.routes.map((r,i)=>'<div class="route"><b>'+r.agency_name+'</b><div class="mode '+(r.supports_direct_automation?'auto':'')+'">'+(r.supports_direct_automation?'DIRECT ADAPTER AVAILABLE':'AUTOMATION NOT VERIFIED YET')+'</div></div>').join('');if(autos.length){$('authorizeBtn').disabled=false;$('authorizeBtn').textContent='FILE IT FOR ME →'}else{$('authorizeBtn').disabled=true;$('authorizeBtn').textContent='NO VERIFIED AUTO-FILING PATH YET'}}catch(e){$('routes').innerHTML='<div class="warn"><strong>NOTHING WAS FILED.</strong><p>'+e.message+'</p></div>';$('authorizeBtn').textContent='CASE ENGINE HOLD'}}
-async function authorize(){if(!analysis||!analysis.token||!caseId)return alert('Case is not ready yet.');$('authorizeBtn').disabled=true;$('authorizeBtn').textContent='AUTHORIZING…';$('caseid').textContent=caseId;$('console').textContent='[01] Case locked\n[02] '+caseId+'\n[03] Authorization recorded\n';show('agent');try{let j=await call({action:'authorize',case_number:caseId,guest_token:analysis.token});if(j.status==='connector_required'||j.status==='route_hold'){$('console').textContent+='[04] '+j.status.toUpperCase()+'\n';$('human').innerHTML='<div class="warn"><strong>WE STOPPED. WE DID NOT PRETEND TO FILE.</strong><p>'+j.message+'</p></div>';return}$('console').textContent+='[04] DIRECT ADAPTER: '+j.route.agency_name+'\n';$('human').innerHTML='<div class="human"><strong>DSA CAN CARRY THIS ROUTE.</strong><p>'+j.message+'</p></div>'}catch(e){$('human').innerHTML='<div class="warn"><strong>FILING STOPPED SAFELY.</strong><p>'+e.message+'</p></div>'}}
-async function renderCases(){let a=refs();if(!a.length){$('caseList').innerHTML='<div class="card"><b>NO CASES YET.</b></div>';return}$('caseList').innerHTML=a.map(x=>'<div class="case"><span class="status">SAVED</span><h3>'+x.who+'</h3><div class="micro">'+x.case_number+' / '+x.where+'</div></div>').join('')}
-$('startBtn').addEventListener('click',start);$('nextBtn').addEventListener('click',next);$('backBtn').addEventListener('click',back);$('editBtn').addEventListener('click',()=>{step=0;renderStep();show('wizard')});$('authorizeBtn').addEventListener('click',authorize);$('navCases').addEventListener('click',()=>show('cases'));$('navReport').addEventListener('click',()=>show('home'));$('tabReport').addEventListener('click',()=>show('home'));$('tabCases').addEventListener('click',()=>show('cases'));$('tabAbout').addEventListener('click',()=>show('about'));$('tabReport').classList.add('active');
+(()=> {
+  const $=id=>document.getElementById(id);
+  const API='https://pbesndmimhujqivviqpw.supabase.co/functions/v1/case-agent';
+  const state={story:'',where:'',who:[],name:'',issues:[],impact:[],tried:[],evidence:[],outcomes:[]};
+  let step=0, analysis=null, caseId='';
+
+  const steps=[
+    {q:'Where did it happen?',k:'where',text:true,ph:'City, state, ZIP'},
+    {q:'Who was responsible?',k:'who',choices:['LANDLORD','PROPERTY MANAGER','HOSPITAL','NURSING HOME','DOCTOR / PROVIDER','EMPLOYER','INSURANCE COMPANY','CONTRACTOR','BUSINESS','GOVERNMENT AGENCY','NOT SURE'],name:true},
+    {q:'What was wrong?',k:'issues',choices:['UNSAFE','BROKEN / NOT WORKING','BILLING / MONEY','IGNORED / NO RESPONSE','DELAYED','POOR QUALITY','DISCRIMINATION','MISCONDUCT','FRAUD / DECEPTION','FAILED SERVICE','RETALIATION','OTHER']},
+    {q:'What did it cause?',k:'impact',choices:['SAFETY RISK','FINANCIAL LOSS','HEALTH IMPACT','ACCESS PROBLEM','MISSED WORK','PROPERTY DAMAGE','EMOTIONAL DISTRESS','NO DIRECT HARM YET']},
+    {q:'What have you already tried?',k:'tried',choices:['CALLED','EMAILED','SPOKE TO MANAGER','FILED INTERNAL COMPLAINT','REQUESTED REFUND','REQUESTED REPAIR','CONTACTED GOVERNMENT','NOTHING YET']},
+    {q:'What proof do you have?',k:'evidence',choices:['PHOTOS','VIDEO','EMAILS','TEXTS','RECEIPTS','BILLS','CONTRACT','MEDICAL RECORDS','LETTERS / NOTICES','WITNESSES','NONE YET']},
+    {q:'What do you want done?',k:'outcomes',choices:['INSPECTION','REPAIR / CORRECTION','REFUND','REIMBURSEMENT','INVESTIGATION','WRITTEN RESPONSE','DISCIPLINE / ENFORCEMENT','STOP THE CONDUCT','RECORD CORRECTION']}
+  ];
+
+  function toast(msg){
+    $('toast').textContent=msg;$('toast').style.display='block';
+    setTimeout(()=>$('toast').style.display='none',1800);
+  }
+  function show(id){
+    document.querySelectorAll('.stage').forEach(x=>x.classList.remove('on'));
+    $(id).classList.add('on');
+    if(id==='cases')renderCases();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function start(){
+    const v=$('story').value.trim();
+    if(!v){toast('Tell us what happened first.');$('story').focus();return;}
+    state.story=v;step=0;renderStep();show('wizard');
+  }
+  function renderStep(){
+    const s=steps[step];
+    $('stepLabel').textContent=`STEP ${step+1} / ${steps.length}`;
+    $('question').textContent=s.q;
+    $('stepbar').innerHTML=steps.map((_,i)=>`<i class="${i<=step?'on':''}"></i>`).join('');
+    if(s.text){
+      $('wizardBody').innerHTML=`<label>LOCATION</label><input id="textval" class="field" placeholder="${s.ph}" value="${state.where||''}">`;
+    } else {
+      const selected=new Set(state[s.k]||[]);
+      $('wizardBody').innerHTML=
+        `<div class="choice-grid">${s.choices.map(v=>`<button class="choice ${selected.has(v)?'sel':''}" type="button" data-v="${v}">${v}</button>`).join('')}</div>`+
+        (s.name?`<label>ACTUAL NAME — OPTIONAL</label><input id="whoName" class="field" placeholder="Business, facility, person, agency..." value="${state.name||''}">`:'');
+      document.querySelectorAll('.choice').forEach(btn=>btn.addEventListener('click',()=>btn.classList.toggle('sel')));
+    }
+    $('nextBtn').textContent=step===steps.length-1?'BUILD THE SUBMISSION PLAN →':'CONTINUE →';
+  }
+  function next(){
+    const s=steps[step];
+    if(s.text){
+      const v=$('textval').value.trim();
+      if(!v){toast('Add the location.');return;}
+      state.where=v;
+    } else {
+      const vals=[...document.querySelectorAll('.choice.sel')].map(x=>x.dataset.v);
+      if(!vals.length){toast('Pick at least one.');return;}
+      state[s.k]=vals;
+      if(s.name)state.name=$('whoName').value.trim();
+    }
+    if(step<steps.length-1){step++;renderStep()} else buildCase();
+  }
+  function back(){
+    if(step>0){step--;renderStep()} else show('home');
+  }
+  function memoHtml(){
+    const who=state.name||state.who.join(', ');
+    return `<b>SUBJECT:</b> ${who}<br><br><b>LOCATION:</b> ${state.where}<br><br><b>ALLEGATION:</b> ${state.story}<br><br><b>ISSUES:</b> ${state.issues.join('; ')}<br><br><b>IMPACT:</b> ${state.impact.join('; ')}<br><br><b>PRIOR ATTEMPTS:</b> ${state.tried.join('; ')}<br><br><b>EVIDENCE:</b> ${state.evidence.join('; ')}<br><br><b>REQUESTED ACTION:</b> ${state.outcomes.join('; ')}<br><br><span class="micro">Prepared from the complainant's account; not a finding that a violation occurred.</span>`;
+  }
+  async function call(payload){
+    const res=await fetch(API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
+    const data=await res.json().catch(()=>({error:'Invalid server response'}));
+    if(!res.ok)throw new Error(data.error||'Case engine unavailable');
+    return data;
+  }
+  function refs(){return JSON.parse(localStorage.getItem('dsa_case_index')||'[]')}
+  function saveRef(ref){
+    let arr=refs().filter(x=>x.case_number!==ref.case_number);
+    arr.unshift(ref);
+    localStorage.setItem('dsa_case_index',JSON.stringify(arr.slice(0,50)));
+  }
+  async function buildCase(){
+    const who=state.name||state.who.join(', ');
+    $('memo').innerHTML=memoHtml();
+    $('routes').innerHTML='<b>BUILDING REAL CASE…</b>';
+    $('authorizeBtn').disabled=true;$('authorizeBtn').textContent='BUILDING CASE…';
+    $('noAuto').style.display='none';
+    show('review');
+    try{
+      const j=await call({
+        action:'create_case',original_story:state.story,location_text:state.where,
+        subject_name:who,subject_types:state.who,problem_types:state.issues,
+        impacts:state.impact,prior_actions:state.tried,evidence_types:state.evidence,
+        desired_outcomes:state.outcomes
+      });
+      caseId=j.case.case_number;
+      analysis={token:j.guest_token,routes:j.routes||[],who};
+      saveRef({case_number:caseId,guest_token:j.guest_token,who,where:state.where});
+      const autos=analysis.routes.filter(r=>r.supports_direct_automation);
+      $('routes').innerHTML=`<span class="pill">${caseId}</span><h3>${analysis.routes.length} AUTHORITY ROUTE${analysis.routes.length===1?'':'S'} IDENTIFIED</h3>`+
+        analysis.routes.map(r=>`<div class="route"><div><b>${r.agency_name}</b><div class="micro">${r.submission_method||'Filing method identified'}</div></div><span class="pill ${r.supports_direct_automation?'':'hold'}">${r.supports_direct_automation?'DIRECT ADAPTER READY':'AUTOMATION NOT VERIFIED'}</span></div>`).join('');
+      if(autos.length){
+        $('authorizeBtn').disabled=false;$('authorizeBtn').textContent='FILE IT FOR ME →';
+      }else{
+        $('authorizeBtn').disabled=true;$('authorizeBtn').textContent='NO VERIFIED AUTO-FILING PATH YET';
+        $('noAuto').style.display='block';
+      }
+    }catch(err){
+      $('routes').innerHTML=`<div class="warn"><strong>NOTHING WAS FILED.</strong>${err.message}</div>`;
+      $('authorizeBtn').textContent='CASE ENGINE HOLD';
+    }
+  }
+  async function authorize(){
+    if(!analysis?.token||!caseId){toast('Case is not ready yet.');return;}
+    $('authorizeBtn').disabled=true;$('authorizeBtn').textContent='AUTHORIZING…';
+    $('console').textContent=`[01] Case locked\n[02] ${caseId}\n[03] Authorization recorded\n`;
+    show('agent');
+    try{
+      const j=await call({action:'authorize',case_number:caseId,guest_token:analysis.token});
+      if(j.status==='connector_required'||j.status==='route_hold'){
+        $('console').textContent+=`[04] ${j.status.toUpperCase()}\n`;
+        $('human').innerHTML=`<div class="warn"><strong>WE STOPPED. WE DID NOT PRETEND TO FILE.</strong>${j.message}</div>`;
+        return;
+      }
+      $('console').textContent+=`[04] DIRECT ADAPTER: ${j.route.agency_name}\n`;
+      $('human').innerHTML=`<div class="panel"><strong>DSA CAN CARRY THIS ROUTE.</strong><p>${j.message}</p></div>`;
+    }catch(err){
+      $('human').innerHTML=`<div class="warn"><strong>FILING STOPPED SAFELY.</strong>${err.message}</div>`;
+    }
+  }
+  function renderCases(){
+    const arr=refs();
+    $('caseList').innerHTML=arr.length?arr.map(x=>`<div class="case"><span class="pill">SAVED</span><h3>${x.who||'CASE'}</h3><div class="micro">${x.case_number}<br>${x.where||''}</div></div>`).join(''):'<p><b>NO CASES YET.</b></p>';
+  }
+  function reportable(){
+    const txt=$('story').value.trim();
+    toast(txt?'YES — WE CAN CHECK FOR A FORMAL PATH.':'DESCRIBE IT FIRST, THEN WE’LL CHECK.');
+  }
+
+  $('startBtn').addEventListener('click',start);
+  $('reportableBtn').addEventListener('click',reportable);
+  $('nextBtn').addEventListener('click',next);
+  $('backBtn').addEventListener('click',back);
+  $('editBtn').addEventListener('click',()=>{step=0;renderStep();show('wizard')});
+  $('authorizeBtn').addEventListener('click',authorize);
+  $('navReport').addEventListener('click',()=>show('home'));
+  $('navHot').addEventListener('click',()=>{$('report').scrollIntoView({behavior:'smooth'})});
+  $('navCases').addEventListener('click',()=>show('cases'));
+  $('navAbout').addEventListener('click',()=>show('about'));
 })();
-</script></body></html>
+</script>
+</body>
+</html>
