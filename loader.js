@@ -1,0 +1,1 @@
+Promise.all(['app1.txt','app2.txt'].map(u=>fetch(u).then(r=>r.text()))).then(p=>new Function(p.join(''))()).catch(e=>{console.error(e);document.body.insertAdjacentHTML('beforeend','<div style="position:fixed;bottom:10px;left:10px;background:#111;color:#fff;padding:10px;z-index:9999">App failed to load. Refresh.</div>')});
