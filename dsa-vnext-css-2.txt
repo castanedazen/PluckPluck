@@ -12,16 +12,17 @@ ve{border-color:#111;background:#fff}.routeActionNote{margin-top:12px;border-lef
 .hero>.homeDoodles+div .sub{max-width:525px!important}
 .hero:after{content:none!important}
 
-/* Keep the picture provocative without covering Liberty's face. The mosaic sits only over the raised finger. */
+/* Keep the picture provocative without covering Liberty's face. The censor follows the finger and reads as true broadcast pixelation, not a pasted block. */
 .heroArt{min-height:535px!important;max-height:610px!important;aspect-ratio:1.04/1!important;transform:rotate(.35deg)!important;box-shadow:12px 12px 0 var(--red),20px 20px 0 rgba(17,17,17,.08)!important}
 .heroArt img{min-height:535px!important;object-position:10% center!important;transform:scale(1.12)!important;transform-origin:43% 48%!important;filter:contrast(1.16) saturate(.68) grayscale(.18)!important}
-.heroArt .fingerCensor{left:27%!important;top:10%!important;width:14%!important;height:20%!important;padding:0 2px 6px!important;border:2px solid #111!important;transform:rotate(-4.5deg)!important;background:repeating-conic-gradient(#050505 0 25%,#555 0 50%,#111 0 75%,#818181 0) 0 0/11px 11px!important;box-shadow:4px 4px 0 var(--red)!important;opacity:.94!important;backdrop-filter:blur(3px) contrast(1.8)!important;display:flex!important;align-items:flex-end!important;justify-content:center!important}
-.heroArt .fingerCensor:after{background:repeating-linear-gradient(0deg,transparent 0 10px,rgba(255,255,255,.13) 10px 11px)!important}
-.heroArt .fingerCensor span{font-size:7px!important;line-height:1.05!important;padding:2px 3px!important;max-width:72px!important;text-align:center!important}
+.heroArt .fingerCensor{left:27.2%!important;top:9.5%!important;width:11.5%!important;height:31%!important;padding:0!important;border:0!important;border-radius:0!important;transform:rotate(-2.7deg)!important;clip-path:polygon(19% 0,81% 0,93% 17%,96% 78%,78% 100%,24% 99%,5% 79%,8% 18%)!important;background:repeating-conic-gradient(from 90deg,rgba(255,255,255,.50) 0 25%,rgba(33,33,33,.44) 0 50%,rgba(160,160,160,.45) 0 75%,rgba(0,0,0,.42) 0) 0 0/13px 13px!important;box-shadow:none!important;opacity:.88!important;backdrop-filter:blur(11px) contrast(.78)!important;-webkit-backdrop-filter:blur(11px) contrast(.78)!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
+.heroArt .fingerCensor:before{content:""!important;position:absolute!important;inset:0!important;background:repeating-linear-gradient(0deg,rgba(255,255,255,.10) 0 1px,transparent 1px 13px)!important;mix-blend-mode:screen!important;pointer-events:none!important}
+.heroArt .fingerCensor:after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(255,255,255,.12),transparent 24%,rgba(0,0,0,.08) 72%,rgba(255,255,255,.08))!important;pointer-events:none!important}
+.heroArt .fingerCensor span{position:absolute!important;left:50%!important;bottom:9%!important;transform:translateX(-50%) rotate(-1deg)!important;background:var(--acid)!important;color:#111!important;border:1px solid #111!important;padding:2px 4px!important;font:900 7px/1 "Courier New",monospace!important;letter-spacing:.02em!important;white-space:nowrap!important;z-index:2!important}
 .heroArt .detentionTag{left:10px!important;top:12px!important;transform:rotate(-3deg)!important}
 
 /* Less sticker clutter, more MTV editorial control. */
 .promise6{margin-top:10px!important}
 .reportCard{margin-top:6px!important}
 @media(max-width:1050px){.hero{grid-template-columns:minmax(0,1fr) minmax(390px,.95fr)!important;gap:26px!important}.hero>.homeDoodles+div h1{font-size:clamp(54px,6.2vw,78px)!important}}
-@media(max-width:900px){.hero{grid-template-columns:1fr!important;gap:24px!important;padding-top:40px!important}.hero>.homeDoodles+div{max-width:760px!important}.heroArt{aspect-ratio:auto!important;max-height:none!important;min-height:430px!important}.heroArt img{min-height:430px!important}.heroArt .fingerCensor{left:27%!important;top:10%!important;width:14%!important;height:20%!important}}
+@media(max-width:900px){.hero{grid-template-columns:1fr!important;gap:24px!important;padding-top:40px!important}.hero>.homeDoodles+div{max-width:760px!important}.heroArt{aspect-ratio:auto!important;max-height:none!important;min-height:430px!important}.heroArt img{min-height:430px!important}.heroArt .fingerCensor{left:27.2%!important;top:9.5%!important;width:11.5%!important;height:31%!important}}
